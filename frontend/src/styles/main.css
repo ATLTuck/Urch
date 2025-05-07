@@ -1,0 +1,154 @@
+:root {
+  --primary-color: #7f5af0;
+  --secondary-color: #2cb67d;
+  --bg-color: #16161a;
+  --text-color: #fffffe;
+  --card-bg: #242629;
+  --highlight: #7f5af0;
+  --dark-highlight: #6246c3;
+  --heading-color: #fffffe;
+  
+  --transition-time: 0.3s;
+  --grid-maxWidth: 1200px;
+  --grid-gutter: 2rem;
+}
+
+html, body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  min-height: 100%;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  transition: transform var(--transition-time), box-shadow var(--transition-time);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.glass {
+  background: rgba(36, 38, 41, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-card {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--highlight);
+}
+
+.tech-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--highlight);
+}
+
+.nav {
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav.glass {
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.button.primary {
+  background-color: var(--primary-color);
+  transition: background-color var(--transition-time);
+}
+
+.button.primary:hover {
+  background-color: var(--dark-highlight);
+}
+
+.code-block {
+  background-color: #2d2d30;
+  border-radius: 6px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  position: relative;
+  margin: 2rem 0;
+  border-left: 4px solid var(--secondary-color);
+}
+
+.code-block pre {
+  margin: 0;
+  color: #e0e0e0;
+  font-family: 'Cascadia Code', 'Fira Code', monospace;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.system-diagram {
+  max-width: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diagram-box {
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 6px;
+  background-color: var(--card-bg);
+  width: 150px;
+  text-align: center;
+  position: relative;
+}
+
+.diagram-arrow {
+  width: 80px;
+  height: 2px;
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+.diagram-arrow:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -4px;
+  border-width: 5px 0 5px 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--primary-color);
+} 

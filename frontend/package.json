@@ -1,0 +1,18 @@
+{
+  "name": "urch-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Urch app using Preact, Chota and anime.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "preact": "^10.15.1",
+    "animejs": "^3.2.1"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.5.0",
+    "vite": "^4.4.9"
+  }
+} 
